@@ -10,7 +10,6 @@ end
 gem 'rails', '~> 5.1.5'
 
 gem 'elasticsearch'
-gem 'hashie'
 gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
