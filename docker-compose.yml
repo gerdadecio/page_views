@@ -10,11 +10,12 @@ services:
     ports:
       - "3000:3000"
     links:
-      - db
+      - postgres
     env_file:
       - .env
-  db:
+    depends_on:
+      - postgres
+  postgres:
     image: postgres:9.4.0
-    environment:
-      - POSTGRES_USER
-      - POSTGRES_PASSWORD
+    ports:
+      - "5432"

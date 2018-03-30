@@ -1,20 +1,19 @@
 default: &default
   adapter: postgresql
-  database: docker_example_rails
+  database: es_page
   encoding: unicode
-  username: <%= ENV['DATABASE_USER'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  username: postgres
   host:     <%= ENV['DATABASE_HOST'] %>
   port:     <%= ENV['DATABASE_PORT'] %>
 
 development:
   <<: *default
-  database: docker_example_rails_development
+  database: es_page_development
 
 test:
   <<: *default
-  database: docker_example_rails_test
+  database: es_page_test
 
 production:
   <<: *default
-  database: docker_example_rails_production
+  database: es_page_production
